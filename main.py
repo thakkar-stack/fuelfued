@@ -6,9 +6,9 @@ def trip_info():
     fuel_economy = float(input('How many litres per 100km does your car use?:'))
     travel_dist = float(input('What was the total distance travelled?:'))
     people = int(input('How many people?:'))
-    petrol_used = round(fuel_economy*(travel_dist/100))
-    total_price = round(petrol_used*fuel_cost)
-    final_price = round((petrol_used*fuel_cost)/people)
+    petrol_used = fuel_economy*(travel_dist/100)
+    total_price = petrol_used*fuel_cost
+    final_price = (petrol_used*fuel_cost)/people
     
     print(f'The total amount of fuel used is {petrol_used}L, the cost of fuel is ${total_price} and the cost per person is ${final_price}')
 
